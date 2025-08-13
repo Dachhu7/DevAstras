@@ -55,6 +55,74 @@
 
     <!-- Preconnect for fonts or analytics if needed -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- ==================== GLOBAL SEO ADDITIONS (kept all lines above) ==================== -->
+    <!-- Hreflang for major English markets + x-default -->
+    <link rel="alternate" href="https://www.devastras.com/" hreflang="x-default">
+    <link rel="alternate" href="https://www.devastras.com/" hreflang="en">
+    <link rel="alternate" href="https://www.devastras.com/us/" hreflang="en-us">
+    <link rel="alternate" href="https://www.devastras.com/uk/" hreflang="en-gb">
+    <link rel="alternate" href="https://www.devastras.com/ca/" hreflang="en-ca">
+    <link rel="alternate" href="https://www.devastras.com/au/" hreflang="en-au">
+
+    <!-- OG locale variations -->
+    <meta property="og:site_name" content="DevAstra's">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="en_GB">
+    <meta property="og:locale:alternate" content="en_CA">
+    <meta property="og:locale:alternate" content="en_AU">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter extras -->
+    <meta name="twitter:site" content="@your_real_twitter_page">
+    <meta name="twitter:creator" content="@your_real_twitter_page">
+
+    <!-- Theming & PWA hooks (optional assets to add) -->
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <!-- Performance hints -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <link rel="preload" as="image" href="assets/images/og-image.png" imagesrcset="assets/images/og-image.png 1x" imagesizes="(max-width: 600px) 100vw, 1200px">
+
+    <!-- Additional Structured Data: Website with SearchAction -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "DevAstra's",
+      "url": "https://www.devastras.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.devastras.com/search?q={query}",
+        "query-input": "required name=query"
+      }
+    }
+    </script>
+
+    <!-- Breadcrumbs for key sections (helps sitelinks) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.devastras.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.devastras.com/#services" },
+        { "@type": "ListItem", "position": 3, "name": "Feature", "item": "https://www.devastras.com/#feature" },
+        { "@type": "ListItem", "position": 4, "name": "FAQ", "item": "https://www.devastras.com/#faq" },
+        { "@type": "ListItem", "position": 5, "name": "Contact", "item": "https://www.devastras.com/#contact" }
+      ]
+    }
+    </script>
+
+    <!-- Robots/crawl hints (optional) -->
+    <meta name="googlebot" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <!-- ==================== END ADDITIONS ==================== -->
 </head>
 <body>
     <!-- Header / Navbar -->
@@ -379,6 +447,8 @@
           autoplay
         >
         </lottie-player>
+        <!-- Noscript fallback for Lottie -->
+        <noscript><img src="assets/images/og-image.png" alt="Digital transformation illustration fallback"></noscript>
       </div>
 
       <!-- Content -->
@@ -396,7 +466,7 @@
           development, and deep domain expertise. We don’t just build software—we
           build growth engines tailored to your vision.
         </p>
-        <a href="#services" class="button-learn-dark">
+        <a href="#services" class="button-learn-dark" aria-label="Explore Services">
           <h5>Explore Our Services</h5>
         </a>
       </div>
@@ -1086,5 +1156,105 @@
 <!-- Lottie player loaded at end so the element can be parsed first -->
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
+<!-- ==================== ADDITIONAL STRUCTURED DATA (FAQPage) ==================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Who is DevAstra's suitable for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DevAstra's is ideal for startups, enterprises, and businesses seeking secure, scalable, and smart tech solutions to empower their digital future."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What services does DevAstra's provide?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer end-to-end IT solutions, including custom web development, secure system integrations, AI-powered business analytics, and custom CRM dashboards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do businesses trust DevAstra's for digital transformation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We combine modern technology, agile development, and deep domain expertise to deliver real-world IT solutions that drive efficiency, security, and scalability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does DevAstra's ensure the security of my business systems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We embed security at every level — from code to cloud — using encryption protocols, SSL certificates, regular security audits, and proactive measures like strong password policies and timely updates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can DevAstra's help me manage my business effectively?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We deliver ready-to-use business landing pages, smart analytics dashboards, and secure IT systems tailored to your goals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to build a custom web application?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Simple MVPs can be delivered in 4–8 weeks, while full-featured products may take 3–9 months, with rapid iterations for early value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide maintenance & post-launch support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We offer ongoing support, monitoring, security patching, and prioritized incident response under our managed plans."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you integrate my existing software with third-party APIs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We integrate payment gateways, ERP systems, CRM platforms, logistics APIs, and more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you price projects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer fixed price, time-and-materials, and dedicated team models. Quotes include timelines and milestone-based payments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What technologies do you use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "React, Next.js, Vue, Node.js, Python (Django/Flask), PostgreSQL/MySQL, AWS/Azure/GCP, Docker, Kubernetes, and ML frameworks like TensorFlow and PyTorch."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- ==================== OPTIONAL: GOOGLE ANALYTICS (paste your GA4 ID) ==================== -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+</script>
+-->
 </body>
 </html>
